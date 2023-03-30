@@ -5,7 +5,7 @@ Worktop::Worktop(int t, double point_x, double point_y) {
 	type = t;
 	x = point_x;
 	y = point_y;
-	remain_frames = -1;
+	remain_frames = (type < 4 ? 50 : -1);	// 初始化的时候给1，2，3工作台赋予剩余帧，方便给机器人分配初始任务
 	raw = 0;
 	product = 0;
 	value = 0;
